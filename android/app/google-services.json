@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "667461757610",
+    "project_id": "guardianmock",
+    "storage_bucket": "guardianmock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667461757610:android:552639deaed2bd823abed3",
+        "android_client_info": {
+          "package_name": "com.example.guardian_view"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClzOaDFggch6dk4qhejDsoAx5XY7noeAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
