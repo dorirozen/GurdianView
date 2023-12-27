@@ -3,15 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:iconly/iconly.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'dash_conroller_final.dart';
+import 'dash_controller.dart';
 
-class DashBoardScreenFinal extends StatefulWidget {
-  const DashBoardScreenFinal({Key? key, required this.t}) : super(key: key);
+class DashBoardScreen extends StatefulWidget {
+  const DashBoardScreen({Key? key}) : super(key: key);
   static const routeName = '/dashboard';
-  final String t;
 
   @override
-  State<DashBoardScreenFinal> createState() => _DashBoardScreenFinalState();
+  State<DashBoardScreen> createState() => _DashBoardScreenState();
 }
 
 Widget _createDrawerItem(
@@ -27,7 +26,7 @@ Widget _createDrawerItem(
   );
 }
 
-class _DashBoardScreenFinalState extends State<DashBoardScreenFinal> {
+class _DashBoardScreenState extends State<DashBoardScreen> {
   @override
   void initState() {
     super.initState();
@@ -39,7 +38,7 @@ class _DashBoardScreenFinalState extends State<DashBoardScreenFinal> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<DashBoardControllerFinal>(
+    return Consumer<DashBoardController>(
       builder: (_, controller, __) {
         return Scaffold(
           appBar: AppBar(

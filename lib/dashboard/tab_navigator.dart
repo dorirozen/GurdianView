@@ -2,16 +2,16 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
-class TabNavigatorFinal extends ChangeNotifier {
-  TabNavigatorFinal(this._initialPage) {
+class TabNavigator extends ChangeNotifier {
+  TabNavigator(this._initialPage) {
     _stackNavigate.add(_initialPage);
   }
 
-  final TabItemFinal _initialPage;
-  final List<TabItemFinal> _stackNavigate = [];
+  final TabItem _initialPage;
+  final List<TabItem> _stackNavigate = [];
 
-  TabItemFinal get currentPage => _stackNavigate.last;
-  void push(TabItemFinal item) {
+  TabItem get currentPage => _stackNavigate.last;
+  void push(TabItem item) {
     _stackNavigate.add(item);
     notifyListeners();
     _dPrint();
@@ -31,13 +31,13 @@ class TabNavigatorFinal extends ChangeNotifier {
     _dPrint();
   }
 
-  void popTo(TabItemFinal page) {
+  void popTo(TabItem page) {
     _stackNavigate.remove(page);
     notifyListeners();
     _dPrint();
   }
 
-  void popUntil(TabItemFinal? page) {
+  void popUntil(TabItem? page) {
     if (page == null || _stackNavigate.length == 1) return popToRoot();
     if (_stackNavigate.length > 1) {
       _stackNavigate.removeRange(1, _stackNavigate.indexOf(page) + 1);
@@ -46,7 +46,7 @@ class TabNavigatorFinal extends ChangeNotifier {
     }
   }
 
-  void pushAndRemoveUntil(TabItemFinal page) {
+  void pushAndRemoveUntil(TabItem page) {
     _stackNavigate
       ..clear()
       ..add(page);
@@ -60,21 +60,21 @@ class TabNavigatorFinal extends ChangeNotifier {
   }
 }
 
-class TabNavigatorProvider1 extends InheritedNotifier<TabNavigatorFinal> {
-  const TabNavigatorProvider1(
+class TabNavigatorProvider extends InheritedNotifier<TabNavigator> {
+  const TabNavigatorProvider(
       {required super.child, required this.navigator, super.key})
       : super(notifier: navigator);
-  final TabNavigatorFinal navigator; // thats what he will return for us .
+  final TabNavigator navigator;
 
-  static TabNavigatorFinal? of(BuildContext context) {
+  static TabNavigator? of(BuildContext context) {
     return context
-        .dependOnInheritedWidgetOfExactType<TabNavigatorProvider1>()
+        .dependOnInheritedWidgetOfExactType<TabNavigatorProvider>()
         ?.navigator;
   }
 }
 
-class TabItemFinal extends Equatable {
-  TabItemFinal({required this.child}) : id = const Uuid().v1();
+class TabItem extends Equatable {
+  TabItem({required this.child}) : id = const Uuid().v1();
   final Widget child;
   final String
       id; // of the tab item to know if a tab is the same as another tab

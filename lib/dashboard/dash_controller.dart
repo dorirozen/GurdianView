@@ -1,45 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:guardian_view/final/per_final.dart';
-import 'package:guardian_view/final/tab_final.dart';
+import 'package:guardian_view/dashboard/persistent_view.dart';
+import 'package:guardian_view/dashboard/tab_navigator.dart';
 import 'package:provider/provider.dart';
 
 import '../temp.dart';
 
-//a
-class DashBoardControllerFinal extends ChangeNotifier {
+class DashBoardController extends ChangeNotifier {
   final List<Widget> _screens = [
     ChangeNotifierProvider(
-      create: (_) => TabNavigatorFinal(
-        TabItemFinal(
+      create: (_) => TabNavigator(
+        TabItem(
           child: HomePage1(),
         ),
       ),
-      child: const PersistentViewFinal(),
+      child: const PersistentView(),
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigatorFinal(
-        TabItemFinal(
+      create: (_) => TabNavigator(
+        TabItem(
           child: HomePage1(),
         ),
       ),
-      child: const PersistentViewFinal(),
+      child: const PersistentView(),
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigatorFinal(
-        TabItemFinal(
+      create: (_) => TabNavigator(
+        TabItem(
           child: HomePage1(), //HomeView(),
         ),
       ),
       child:
-          const PersistentViewFinal(), //remember ! we didnt pass any body so it will watch
+          const PersistentView(), //remember ! we didnt pass any body so it will watch
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigatorFinal(
-        TabItemFinal(
+      create: (_) => TabNavigator(
+        TabItem(
           child: HomePage1(),
         ),
       ),
-      child: const PersistentViewFinal(),
+      child: const PersistentView(),
     ),
   ];
   List<int> _indexHistory = [0];
