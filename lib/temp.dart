@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:guardian_view/context_extensions.dart';
+import 'package:guardian_view/core/extentions/context_extensions.dart';
 
 class HomePage1 extends StatefulWidget {
   @override
@@ -13,45 +13,44 @@ class _HomePage1State extends State<HomePage1> {
     bool isDarwer = MediaQuery.of(context).size.width > 600;
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
-      ),
-      body: Column(
-        children: [
-          Center(
-            child: ElevatedButton(
-              child: Text('Go to Notifications',
-                  style: TextStyle(fontSize: 12.0.sp)),
-              onPressed: () {
-                context.push(NotificationPage());
-              },
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
+                child: Text('Go to Notifications',
+                    style: TextStyle(fontSize: 12.0.sp)),
+                onPressed: () {
+                  context.push(NotificationPage());
+                },
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-              child: Text(
-            'h : ${h.toString()}',
-            style: TextStyle(fontSize: 24.0.sp),
-          )),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-            child: Text('w : ${w.toString()}',
-                style: TextStyle(fontSize: 12.0.sp)),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-              child: Text(
-            isDarwer.toString(),
-            style: TextStyle(fontSize: 12.0),
-          )),
-        ],
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+                child: Text(
+              'h : ${h.toString()}',
+              style: TextStyle(fontSize: 24.0.sp),
+            )),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: Text('w : ${w.toString()}',
+                  style: TextStyle(fontSize: 12.0.sp)),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+                child: Text(
+              isDarwer.toString(),
+              style: TextStyle(fontSize: 12.0),
+            )),
+          ],
+        ),
       ),
     );
   }

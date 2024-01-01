@@ -31,3 +31,22 @@ ElevatedButton(
           child: Text('Toggle Theme'),
         ),
  */
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:guardian_view/src/theme/theme_provider.dart';
+
+class ToggleDarkLight extends StatelessWidget {
+  const ToggleDarkLight({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(context.read<ThemeProvider>().isDarkMode
+          ? Icons.dark_mode
+          : Icons.light_mode),
+      onPressed: () {
+        context.read<ThemeProvider>().toggleTheme();
+      },
+    );
+  }
+}

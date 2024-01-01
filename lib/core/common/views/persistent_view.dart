@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guardian_view/dashboard/tab_navigator.dart';
+import 'package:guardian_view/core/common/app/providers/tab_navigator.dart';
 
 import 'package:provider/provider.dart';
 
