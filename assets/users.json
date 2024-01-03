@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Ari",
+    "id": "21",
+    "city": "Tel Aviv"
+  },
+  {
+    "name": "Lea",
+    "id": "22",
+    "city": "Haifa"
+  },
+  {
+    "name": "Noam",
+    "id": "23",
+    "city": "Jerusalem"
+  },
+  {
+    "name": "Yael",
+    "id": "24",
+    "city": "Beersheba"
+  },
+  {
+    "name": "Eitan",
+    "id": "25",
+    "city": "Netanya"
+  },
+  {
+    "name": "Sivan",
+    "id": "26",
+    "city": "Ashdod"
+  },
+  {
+    "name": "Omer",
+    "id": "27",
+    "city": "Ramat Gan"
+  },
+  {
+    "name": "Tamar",
+    "id": "28",
+    "city": "Herzliya"
+  },
+  {
+    "name": "Itai",
+    "id": "29",
+    "city": "Eilat"
+  },
+  {
+    "name": "Shira",
+    "id": "30",
+    "city": "Holon"
+  },
+  {
+    "name": "Dan",
+    "id": "31",
+    "city": "Kfar Saba"
+  },
+  {
+    "name": "Neta",
+    "id": "32",
+    "city": "Petah Tikva"
+  },
+  {
+    "name": "Ari",
+    "id": "21",
+    "city": "Tel Aviv"
+  },
+  {
+    "name": "Lea",
+    "id": "22",
+    "city": "Haifa"
+  },
+  {
+    "name": "Noam",
+    "id": "23",
+    "city": "Jerusalem"
+  },
+  {
+    "name": "Yael",
+    "id": "24",
+    "city": "Beersheba"
+  },
+  {
+    "name": "Eitan",
+    "id": "25",
+    "city": "Netanya"
+  },
+  {
+    "name": "Sivan",
+    "id": "26",
+    "city": "Ashdod"
+  },
+  {
+    "name": "Omer",
+    "id": "27",
+    "city": "Ramat Gan"
+  },
+  {
+    "name": "Tamar",
+    "id": "28",
+    "city": "Herzliya"
+  },
+  {
+    "name": "Itai",
+    "id": "29",
+    "city": "Eilat"
+  },
+  {
+    "name": "Shira",
+    "id": "30",
+    "city": "Holon"
+  },
+  {
+    "name": "Dan",
+    "id": "31",
+    "city": "Kfar Saba"
+  },
+  {
+    "name": "Neta",
+    "id": "32",
+    "city": "Petah Tikva"
+  }
+]
