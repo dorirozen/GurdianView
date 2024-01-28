@@ -34,7 +34,7 @@ class _MyListViewState extends State<MyListView> {
               onAddPressed: () => _showAddForm(context, 'Cameras'),
             ),
             CategoryExpansionTile(
-              categoryTitle: 'Settings',
+              categoryTitle: 'Settingsss',
               categoryItems: Firetry().getSettings(),
             ),
           ],
