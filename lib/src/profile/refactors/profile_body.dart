@@ -26,7 +26,7 @@ class _ProfileBodyState extends State<ProfileBody> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //for user
+            // TODO: for user
             if (!context.userProvider.user!.isAdmin) ...[
               CoustomButton(
                 label: 'Changed something ?',
@@ -47,6 +47,8 @@ class _ProfileBodyState extends State<ProfileBody> {
                 },
               ),
             ],
+
+            /// TODO: for admin
             if (context.userProvider.user!.isAdmin) ...[
               CoustomButton(
                 label: 'User setting',

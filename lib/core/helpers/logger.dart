@@ -9,10 +9,25 @@ final logger = MyLogger('MyHomePageState');
 class MyLogger {
   final String name;
   late final Logger _logger;
+
+  factory MyLogger(String name) {
+    // Additional logic before object creation if needed
+    return MyLogger._internal(name);
+  }
+  MyLogger._internal(this.name)
+      : _logger = Logger(
+          printer: MyLogPrinter(name),
+        );
+
+  /// normal approach
+  /*
+  final String name;
+  late final Logger _logger;
   MyLogger(this.name)
       : _logger = Logger(
           printer: MyLogPrinter(name),
         );
+   */
   void note(String message) {
     _logger.t(message);
   }

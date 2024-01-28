@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guardian_view/core/common/app/providers/tab_navigator.dart';
 import 'package:guardian_view/core/common/views/persistent_view.dart';
+import 'package:guardian_view/src/alerts/presention/views/alerts_view.dart';
 import 'package:guardian_view/src/profile/views/profile_sub_screen_view.dart';
 
 import 'package:guardian_view/temp.dart';
@@ -19,7 +20,7 @@ class DashBoardController extends ChangeNotifier {
     ChangeNotifierProvider(
       create: (_) => TabNavigator(
         TabItem(
-          child: HomePage1(),
+          child: AlertListPage(),
         ),
       ),
       child: const PersistentView(),

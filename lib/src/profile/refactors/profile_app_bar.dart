@@ -11,6 +11,8 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
       title: Text(
         'Account',
         style: TextStyle(
@@ -18,9 +20,11 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
           fontSize: 24,
         ),
       ),
+      /*
       actions: const [
         ToggleDarkLight(),
       ],
+       */
     );
   }
 }

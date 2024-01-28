@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -47,29 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBSnGgWK37DAxRXJA-hDgTdCIYJmbGtKW0',
-    appId: '1:667461757610:web:ef9eaf5fa737be6b3abed3',
-    messagingSenderId: '667461757610',
-    projectId: 'guardianmock',
-    authDomain: 'guardianmock.firebaseapp.com',
-    storageBucket: 'guardianmock.appspot.com',
-    measurementId: 'G-QX3CS1907E',
+    apiKey: 'AIzaSyBlABSj3dOPYSrkczSEO0MdW4LPPVzHsZI',
+    appId: '1:800381544768:web:ed5998b50c4f6123e772a5',
+    messagingSenderId: '800381544768',
+    projectId: 'guradianview',
+    authDomain: 'guradianview.firebaseapp.com',
+    storageBucket: 'guradianview.appspot.com',
+    measurementId: 'G-V9BVCF3ME2',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyClzOaDFggch6dk4qhejDsoAx5XY7noeAI',
-    appId: '1:667461757610:android:552639deaed2bd823abed3',
-    messagingSenderId: '667461757610',
-    projectId: 'guardianmock',
-    storageBucket: 'guardianmock.appspot.com',
+    apiKey: 'AIzaSyDKp0r3Ky-4Dytrxa1RmeTxkXSEtxbfJDI',
+    appId: '1:800381544768:android:951a7161e6c83aaee772a5',
+    messagingSenderId: '800381544768',
+    projectId: 'guradianview',
+    storageBucket: 'guradianview.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCmL1gV7gsLc8TjGGPWXWXYUgfdgvCqlWE',
-    appId: '1:667461757610:ios:7583e9370a9586a93abed3',
-    messagingSenderId: '667461757610',
-    projectId: 'guardianmock',
-    storageBucket: 'guardianmock.appspot.com',
+    apiKey: 'AIzaSyDJQLVVHuy-RiyJR353XDS6beHj2IXJGb4',
+    appId: '1:800381544768:ios:6602c2e1081b7086e772a5',
+    messagingSenderId: '800381544768',
+    projectId: 'guradianview',
+    storageBucket: 'guradianview.appspot.com',
     iosBundleId: 'com.example.guardianView',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDJQLVVHuy-RiyJR353XDS6beHj2IXJGb4',
+    appId: '1:800381544768:ios:4f3a5cdc56dfefcae772a5',
+    messagingSenderId: '800381544768',
+    projectId: 'guradianview',
+    storageBucket: 'guradianview.appspot.com',
+    iosBundleId: 'com.example.guardianView.RunnerTests',
   );
 }

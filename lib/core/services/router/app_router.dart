@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:guardian_view/core/common/dialog/dialog_manager.dart';
 import 'package:guardian_view/core/common/views/page_un_implemented.dart';
 import 'package:guardian_view/core/extentions/context_extensions.dart';
 import 'package:guardian_view/core/responsive/views/home/home_root_view.dart';
@@ -15,14 +16,13 @@ import 'package:guardian_view/src/on_boarding/presention/screens/on_boarding_scr
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../src/dashboard/views/dash_board.dart';
 import '../../../src/connection/logic/cubit/internet_cubit.dart';
-import '../../../src/in_deployment/alerts/presention/alerts_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case '/d':
       return _pageBuilder((_) => HomeRootView(), settings: settings);
-    case '/t':
-      return _pageBuilder((_) => AlertsFromUrl(), settings: settings);
+    //case '/t':
+    //return _pageBuilder((_) => AlertsFromUrl(), settings: settings);
     case '/':
       final pref = sl<SharedPreferences>();
       return _pageBuilder(
@@ -114,6 +114,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
   }
 }
 
+///
 PageRouteBuilder<dynamic> _pageBuilder(
     Widget Function(BuildContext context) page,
     {required RouteSettings settings}) {
@@ -123,5 +124,5 @@ PageRouteBuilder<dynamic> _pageBuilder(
             opacity: animation,
             child: child,
           ),
-      pageBuilder: (context, _, __) => page(context));
+      pageBuilder: (context, _, __) => DialogManager(child: page(context)));
 }

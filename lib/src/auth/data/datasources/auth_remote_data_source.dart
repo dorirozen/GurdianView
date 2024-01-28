@@ -8,27 +8,6 @@ import 'package:guardian_view/core/error/exceptions.dart';
 import 'package:guardian_view/core/typedefs/typedef.dart';
 import 'package:guardian_view/src/auth/data/models/user_model.dart';
 
-abstract class IAuth {}
-
-abstract class ICloudStore {}
-
-abstract class IStorage {}
-
-class FirebaseAuthService {
-  final FirebaseAuth _firebaseAuth;
-  FirebaseAuthService(this._firebaseAuth);
-}
-
-class FirebaseFirestoreService implements ICloudStore {
-  final FirebaseFirestore _firebaseFirestore;
-  FirebaseFirestoreService(this._firebaseFirestore);
-}
-
-class FirebaseStorageService implements IStorage {
-  final FirebaseStorage _firebaseStorage;
-  FirebaseStorageService(this._firebaseStorage);
-}
-
 abstract class AuthRemoteDataSource {
   const AuthRemoteDataSource();
 

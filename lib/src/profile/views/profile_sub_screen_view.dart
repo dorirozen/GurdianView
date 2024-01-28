@@ -11,8 +11,10 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: false,
+      extendBodyBehindAppBar: true,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+
+      /// ProfileAppBar for toggles!
       appBar: const ProfileAppBar(),
       body: GradientBackGround(
         toUse: false,
@@ -24,7 +26,11 @@ class ProfileView extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            ProfileHeader(), // shows some details of the user
+
+            ///to show some details of the user \ admin
+            ProfileHeader(),
+
+            ///
             ProfileBody(),
           ],
         ),

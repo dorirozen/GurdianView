@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:guardian_view/res_try/base_model_widget.dart';
+import 'package:guardian_view/res_try/drawer_item_data.dart';
 
-class DrawerOptionTabletPortrait extends StatelessWidget {
-  final String? title;
-  final IconData? iconData;
-  const DrawerOptionTabletPortrait({
-    super.key,
-    this.title,
-    this.iconData,
-  });
+class DrawerOptionTabletPortrait extends BaseModelWidget<DrawerItemData> {
+  const DrawerOptionTabletPortrait({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, DrawerItemData data) {
     return Container(
       width: 152,
       alignment: Alignment.center,
@@ -18,10 +14,10 @@ class DrawerOptionTabletPortrait extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Icon(
-            iconData ?? Icons.add,
+            data.iconData ?? Icons.add,
             size: 45,
           ),
-          Text(title ?? '', style: TextStyle(fontSize: 20)),
+          Text(data.title ?? '', style: TextStyle(fontSize: 20)),
         ],
       ),
     );
