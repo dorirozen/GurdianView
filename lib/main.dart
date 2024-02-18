@@ -19,11 +19,14 @@ import 'package:guardian_view/src/dashboard/providers/dash_controller.dart';
 import 'package:guardian_view/src/profile_try/ui.dart';
 import 'package:guardian_view/src/theme/app_theme.dart';
 import 'package:guardian_view/src/theme/theme_provider.dart';
+import 'package:guardian_view/src/video/presention/cubit/video_cubit.dart';
+import 'package:guardian_view/src/video/presention/views/video_adding.dart';
 import 'package:guardian_view/temp.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 /// trying little part of code
+/*
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -67,7 +70,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
     );
   }
 }
-
+ */
 // i took the code of "all app main" and i make it simpler.
 //לוקח את הקוד ויוצר את הגרסא הכי הכי פשוטה שלו כדי העיקר לרוץ על הפרוייקט
 /*
@@ -200,7 +203,7 @@ class MyApp extends StatelessWidget with WidgetsBindingObserver {
 }
 */
 /// responsive main done !!
-/*
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -303,15 +306,19 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: DialogManager(
+        home:
+            /*
+        DialogManager(
             child:
-                ExampleOfUsingDialog())); /*BlocProvider(
-            create: (_) => sl<VideoCubit>(),
-            child:
-                const UploadVideo())); */ // AlertsWidget())); //HomeViewRoot());
+                ExampleOfUsingDialog()));
+         */
+            BlocProvider(
+                create: (_) => sl<VideoCubit>(),
+                child:
+                    const UploadVideo())); // AlertsWidget())); //HomeViewRoot());
   }
 }
-*/
+
 ///video + alert ui done
 /*
 void main() => runApp(DevicePreview(
