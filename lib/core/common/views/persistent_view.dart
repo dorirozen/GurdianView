@@ -15,7 +15,6 @@ class _PersistentViewState extends State<PersistentView>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    // context.watch<TabNavigator>() = go up the widget tree , find me the closest tabNavigator
     return widget.body ?? context.watch<TabNavigator>().currentPage.child;
   }
 

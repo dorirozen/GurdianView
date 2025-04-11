@@ -29,14 +29,7 @@ class DialogMaker extends ChangeNotifier {
         customData: statusData,
         title: title,
         description: description);
-/*
- mainButtonTitle: 'Dori Course',
-        //secondaryButtonTitle: 'lets do it !',
-        type: DialogType.basic,
-        customData: BasicDialogStatus.error,
-        title: 'Dialog Manager',
-        description: 'Tryinggggggggggg to do ittt');
- */
+
     if (dialogResult.confirmed) {
       debugPrint('User has confirmed');
     } else {
